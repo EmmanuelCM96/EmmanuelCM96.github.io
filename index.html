@@ -7,9 +7,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
             text-align: center;
-            color: #333;
+            color: white;
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -18,32 +18,50 @@
             height: 100vh;
         }
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
         }
         p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
         }
         button {
-            background-color: #f0f0f0;
-            color: #333;
-            border: 1px solid #ccc;
-            padding: 10px 20px;
+            background-color: white;
+            color: #ff7a85;
+            border: none;
+            padding: 15px 30px;
             font-size: 1rem;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: background-color 0.3s ease;
         }
         button:hover {
             background-color: #e0e0e0;
             transform: scale(1.05);
         }
+        #gif-container {
+            display: none; /* Ocultar inicialmente */
+            margin-top: 20px;
+        }
+        img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Hola, [su nombre]</h1>
-    <p>Solo quería decirte que me pareces una persona bonita 😊</p>
-    <button onclick="alert('¡Que tengas un lindo día!')">¡Haz clic aquí!</button>
+    <h1>Hola, Yaren</h1>
+    <p>Solo quería decirte que me pareces una persona bonita, y espero que este pequeño detalle te saque una sonrisa 😊</p>
+    <button onclick="mostrarGif()">¡Haz clic aquí!</button>
+    <div id="gif-container">
+        <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" alt="GIF bonito">
+    </div>
+
+    <script>
+        function mostrarGif() {
+            const gifContainer = document.getElementById('gif-container');
+            gifContainer.style.display = 'block'; // Mostrar el contenedor del GIF
+        }
+    </script>
 </body>
 </html>
