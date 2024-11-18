@@ -43,6 +43,16 @@
 <body>
     <h1>Hola,Yaren </h1>
     <p>Solo quería decirte que me pareces una persona bonita, y espero que este pequeño detalle te saque una sonrisa 😊</p>
-    <button onclick="alert('¡Espero que tengas un gran día! 😊')">¡Haz clic aquí!</button>
+    <button onclick="mostrarGif()">¡Haz clic aquí!</button>
+    <div id="gif-container">
+        <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" alt="GIF bonito">
+    </div>
+
+    <script>
+        function mostrarGif() {
+            const gifContainer = document.getElementById('gif-container');
+            gifContainer.style.display = 'block'; // Mostrar el contenedor del GIF
+        }
+    </script>
 </body>
 </html>
